@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://s3.amazonaws.com/myadvobuck/static/libs/typed.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <meta http-equiv="X-UA_Compatible" content="ie=edge">
+
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="./fullpage.min.css">
+  <title>ThemeHub</title>
+  </head>
+  <style>
+    /* css code */
+  *
+  {
+    transition: all 0.3s linear;
+  }
+  @viewport{
+    zoom:1.0;
+    width:extend-to-zoom;
+  }
+  @-ms-viewport
+    {
+      width:extend-to-zoom;
+       zoom:1.0;
+    }
+  body
+  {
+    font-family: "Times New Roman", Georgia, Serif;
+  }
+  .heading
+  {
+    font-size:50px;
+    font-family: "Playfair Display";
+
+  }
+  .bgimg
+  {
+    background: url('./photos/Untitled design.png') no-repeat center center / cover;
+    background-image: linear-gradient(rgba(0,0,51,0.2),(187,187,187,0.2));
+     height:100vh;
+  }
+  #about{
+      background: url('') no-repeat center center / cover;
+    height:100vh;
+  }
+  #temp
+  {
+      background: url('') no-repeat center center / cover;
+    height:100vh;
+  }
+  .typed{
+    text-transform: uppercase;
+    font-size: 50px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+  }
+.card
+{
+  transition: 0.5s ease;
+  cursor:pointer;
+
+}
+  .card:hover{
+    border-color: #000839;
+    transform: scale(1.1);
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,51,0.2);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,51,0.2);
+    box-shadow: -1px 9px 40px -12px rgba(0,0,51,0.2);
+
+  }
+  .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.contact
+{
+position: relative;
+padding: 100px 0;
+background: url('./photos/contact.jpg') no-repeat center center / cover ;
+background-image: linear-gradient(rgba(0,0,51,0.2),(187,187,187,0.2));
+min-height: 100vh;
+}
+
+.single-portfolio
+{
+  position:relative;
+  overflow: hidden;
+}
+.portfolio-img{
+  -webkit-transition:all .5s;
+  -moz-transition:all .5s;
+  -ms-transition:all .5s;
+  -o-transition:all .5s;
+  transition:all .5s;
+}
+.portfolio-text
+{
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  width:100%;
+  background: rgba(0, 0, 0, 0.5);
+  color:#fff;
+  -webkit-transform:translateY(100%);
+  -moz-transform:translateY(100%);
+  -ms-transform:translateY(100%);
+  -o-transform:translateY(100%);
+  transform:translateY(100%);
+}
+.portfolio-textarea{
+  text-align: justify;
+}
+.single-portfolio:hover .portfolio-text
+{
+  -webkit-transform:translateY(0);
+  -moz-transform:translateY(0);
+  -ms-transform:translateY(0);
+  -o-transform:translateY(0);
+  transform:translateY(0);
+}
+.single-portfolio:hover .portfolio-img{
+  -webkit-transform:scale(1.15);
+  -moz-transform:scale(1.15);
+  -ms-transform:scale(1.15);
+  -o-transform:scale(1.15);
+  transform:scale(1.15);
+}
+.moveTextUp{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s all ease-in-out;
+}
+.moveTextUp-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.moveTextUp1{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s all ease-in-out;
+}
+.moveTextUp1-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.moveTextUp2{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s all ease-in-out;
+}
+.moveTextUp2-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+body{margin-top:20px;}
+
+.team-list img {
+  width: 30%;
+}
+
+.team-list .content {
+  width: 30%;
+}
+
+.team-list .content .follow {
+  position: absolute;
+  bottom: 24px;
+}
+
+.team-list:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.team, .team-list {
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+}
+
+.team .content .title, .team-list .content .title {
+  font-size: 18px;
+}
+
+.team .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.team .member-position, .team .team-social {
+  position: absolute;
+  bottom: -35px;
+  right: 0;
+  left: 0;
+  margin: auto 10%;
+  z-index: 99;
+}
+
+
+.team:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.team:hover .overlay {
+  opacity: 0.6;
+}
+
+.team:hover .team-social {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .team-list img,
+  .team-list .content {
+    width: 100%;
+    float: none !important;
+  }
+  .team-list img .follow,
+  .team-list .content .follow {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+.rounded {
+    border-radius: 5px !important;
+}
+
+.para-desc {
+    max-width: 600px;
+}
+.text-muted {
+    color: #8492a6 !important;
+}
+
+.section-title .title {
+    letter-spacing: 0.5px;
+    font-size: 30px;
+}
+
+
+.bg-grey {
+        background: #292929;
+     }
+     .logo-footer {
+        margin-bottom: 40px;
+     }
+     footer {
+            color: grey;
+     }
+.btn-footer {
+                 color: grey;
+              
+                text-decoration: none;
+                border: 1px solid;
+                border-radius: 43px;
+                font-size: 13px;
+                padding: 7px 30px;
+                line-height: 47px;
+     }
+     .btn-footer:hover {
+                
+                text-decoration: none;
+               
+     }
+    .form-footer input[type="text"] {
+        border: none;
+    border-radius: 16px 0 0 16px;
+    outline: none;
+    padding-left: 10px;
+    
+}
+::placeholder {
+    font-size: 10px;
+    padding-left: 10px;
+    font-style: italic;
+}
+ .form-footer input[type="button"] {
+    border: none;
+    background:#232323;
+        margin-left: -5px;
+    color: #fff;
+    outline: none;
+    border-radius: 0 16px 16px 0;
+    padding: 2px 12px;
+}
+     .social .fa {
+    color: grey;
+    font-size: 22px;
+    padding: 10px 15px;
+    background: #3c3c3c;
+}
+     footer ul li {
+    list-style: none;
+    display: block;
+}
+  footer ul  {
+   padding-left: 0;
+}
+footer ul  li a{
+  text-decoration: none;
+  color: grey;
+  text-decoration:none;
+}
+a:hover {
+    text-decoration: none;
+    color: #f5f5f5 !important;
+    
+}
+.logo-part {
+    border-right: 1px solid grey;
+    height: 100%;
+    }
+</style>
+
+  <body >
+    <!-- -----------------------------------
+    NAV BAR
+    ----------------------------------- -->
+
+    <div>
+            <nav style="background-color:white;" class="navbar navbar-expand-sm fixed-top">
+              <a href="#"><img src="./photos/Theme.png" width="100px" height="100px"></a>
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <i class="fas fa-bars" ></i>
+              </button>
+
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav m-auto">
+                  <li class="nav-item ">
+                    <a class="nav-link text-dark" href="#"><b>Home</b></a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-dark"  href="second.html"><b>Themes & Templates</b></a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link text-dark" href="#about"><b>Team</b></a>
+                  </li>
+                  
+                  <li class="nav-item ">
+                    <a class="nav-link text-dark" href="#contact"><b>Contact Us</b></a>
+                  </li>
+                </ul>
+              </div>
+          </nav>
+    </div>
+<br>
+<!-- -----------------------------------
+HOME IMAGE
+----------------------------------- -->
+<div>
+ <div class="bgimg">
+
+      <div class="typed-strings">
+        <p>whatever</p>
+        <p ><strong>Templates</strong> you need,</p>
+        <p ><strong>Ideas</strong> we provide.</p>
+      </div>
+      <span class="typed"> </span>
+ </div>
+</div>
+
+<!-- !-- -----------------------------------
+Templates
+----------------------------------- -->
+<section style="padding-bottom: 30%;">
+<div id="temp" >
+
+<div class="container-fluid">
+<br><br><br><br><br><br>
+<h1 class="moveTextUp1 display-4 text-center font-weight-bold ">Themes & Templates</h1>
+
+
+            <hr style="margin:auto;width:50%;background-color:black;" >
+
+            <br><br>
+            <center><a href ="second.html" class="btn btn-lg btn-secondary text-light">Get Started</a></center>
+            <br><br><br>
+            <div class="row">
+             <div class="column">
+               <br><br><br><br>
+
+               <div class="single-portfolio">
+                   <img class="portfolio-img" src="./photos/amtravel.jpg" style="width:100%">
+                   <div class="portfolio-text">
+                     <p class="text">Travel</p>
+                  </div>
+                </div>
+
+               <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/anhotel.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Hotel</p>
+              </div>
+            </div>
+
+              <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/anphotography.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Photography</p>
+              </div>
+            </div>
+
+              <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/antravel.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Travel</p>
+              </div>
+              </div>
+              </div>
+
+             <div class="column">
+
+                <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/book.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Book</p>
+              </div>
+            </div>
+
+            <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/home_decor.jpg"style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Home Decor</p>
+              </div>
+            </div>
+
+            <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/dart.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Art</p>
+              </div>
+            </div>
+
+            <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/flowershop.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Flower Shop</p>
+              </div>
+            </div>
+           </div>
+
+             <div class="column">
+               <br>
+
+                <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/icecream.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">IceCream Parlour</p>
+              </div>
+            </div>
+
+            <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/gym.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Gym</p>
+              </div>
+            </div>
+
+
+            <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/coffee.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Coffee House</p>
+              </div>
+            </div>
+
+
+            <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/theater.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Theater</p>
+              </div>
+             </div>
+           </div>
+
+             <div class="column">
+               <br><br><br><br><br><br>
+
+                <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/med.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Medical</p>
+              </div>
+            </div>
+
+
+            <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/nart.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Art</p>
+              </div>
+            </div>
+
+
+            <div class="single-portfolio">
+               <img class="portfolio-img" src="./photos/nphotography.jpg" style="width:100%">
+               <div class="portfolio-text">
+                 <p class="text">Photography</p>
+              </div>
+            </div>
+           </div>
+             </div>
+</div>
+</div>
+</section>
+
+<!-- -----------------------------------
+TEAM WEBSITE
+----------------------------------- -->
+
+
+<div id="about" >
+  <br><br><br><br>
+  <h1 class="moveTextUp display-4 text-center font-weight-bold ">Our Team</h1>
+      <!-- <span class="heading display-3 font-weight-bold moveTextUp" style="color:#333333;" ><center>About   Us</center></span> -->
+  
+        <div class="container">
+  
+              <hr style="margin:auto;width:50%;background-color:black;" >
+              <br><br>
+              <br><br>
+  
+          <p style="text-align:center;font-size:20px;color:#706c61;">
+          The purpose of this website is to provide FREE templates to the inovative designers out there.
+          This website can fulfil 90% of your needs required to design a website and the rest 10% depends on how
+          beautifully you utilise it. :)</p>
+        </div>
+  </div>
+
+  <div class="container bootdey " style="margin-top:-280px;">
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="https://i.pinimg.com/474x/b4/3c/1c/b43c1c879b9d2f0a1b0eb12c82650b48.jpg" class="img-fluid shadow rounded-pill" alt="" height="250px" width="250px">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Lisa Martin</h4>
+                        <small class="text-muted">Founder</small>
+                       
+                    </div>
+                </div>
+            </div><!--end col-->
+            
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="https://i.pinimg.com/236x/f8/ec/f7/f8ecf73c74ab8bfe8794740ff1d359c8--school-photography-photography-ideas.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="" height="250px" width="250px">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Calvin Carlo</h4>
+                        <small class="text-muted">C.E.O.</small>
+                       
+                    </div>
+                </div>
+            </div><!--end col-->
+            
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="https://www.viewbug.com/media/mediafiles/2018/04/15/78489158_large.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="" height="250px" width="250px">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Richha Jotchi</h4>
+                        <small class="text-muted">Manager</small>
+                       
+                    </div>
+                </div>
+            </div><!--end col-->
+            
+            
+        </div><!--end row-->
+    </div>
+
+
+
+
+
+
+<!-- !-- -----------------------------------
+FOOTER
+----------------------------------- -->
+<div id="contact ">
+<footer class="container-fluid bg-grey py-5">
+<div class="container py-3">
+   <div class="row">
+      <div class="col-md-6">
+         <div class="row">
+            <div class="col-md-6 ">
+               <div class="logo-part">
+                  <h5><b>ThemeHub</b></h5>
+                  <p>7637 Sector-xy, UT 19406</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+               </div>
+            </div>
+            <div class="col-md-6 px-4">
+               <h6> About Company</h6>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+               <a href="#" class="btn-footer"> More Info </a><br>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6">
+         <div class="row">
+            <div class="col-md-6 px-4">
+               <h6> Help us</h6>
+               <div class="row ">
+                  <div class="col-md-6">
+                     <ul>
+                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="#contact"> Contact</a> </li>
+                        <li> <a href="second.html"> Templates</a> </li>
+                        <li> <a href="#about"> Team</a> </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-6 ">
+               <h6>E-Mail</h6>
+               <a href="mailto:hubtheme1004@gmail.com" >hubtheme1004@gmail.com</a>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+                
+
+</footer>
+</div>
+</body>
+
+<!-- -----------------------------------
+JAVA SCRIPT & Jquery
+----------------------------------- -->
+<script>
+  function scrollAppear(){
+    var moveTextUp = document.querySelector('.moveTextUp');
+    var sectiononeh1Post = moveTextUp.getBoundingClientRect().top;
+    var screenpos = window.innerHeight;
+
+    if(sectiononeh1Post < screenpos){
+      moveTextUp.classList.add('moveTextUp-appear');
+    }
+}
+window.addEventListener('scroll',scrollAppear);
+</script>
+<script>
+  function scrollAppear1(){
+    var moveTextUp1 = document.querySelector('.moveTextUp1');
+    var sectiononeh1Post1 = moveTextUp1.getBoundingClientRect().top;
+    var screenpos1 = window.innerHeight;
+
+    if(sectiononeh1Post1 < screenpos1){
+      moveTextUp1.classList.add('moveTextUp1-appear');
+    }
+}
+window.addEventListener('scroll',scrollAppear1);
+</script>
+<script>
+  function scrollAppear2(){
+    var moveTextUp2 = document.querySelector('.moveTextUp2');
+    var sectiononeh1Post2 = moveTextUp2.getBoundingClientRect().top;
+    var screenpos1 = window.innerHeight;
+
+    if(sectiononeh1Post2 < screenpos1){
+      moveTextUp2.classList.add('moveTextUp2-appear');
+    }
+}
+window.addEventListener('scroll',scrollAppear2);
+</script>
+<script>
+$(document).ready(function()
+{
+$(window).scroll(function()
+  {
+    if($(this).scrollTop() > 5)
+    {
+      $("#im").css("width","50px").css("height","50px");
+    }
+    else
+    {
+        $("#im").css("width","100px").css("height","100px");
+    }
+});
+});
+
+</script>
+ <script type="text/javascript">
+
+
+      var type= new Typed('.typed',{
+
+        stringsElement:'.typed-strings',
+        typeSpeed: 100,
+
+      });
+
+ </script>
+  </body>
+</html>
